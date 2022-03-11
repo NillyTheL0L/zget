@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo echo you need Zenity and Wget install with your favourite package manager && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
