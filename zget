@@ -1,0 +1,4 @@
+#!/bin/sh
+link=$(zenity --entry --title="zget" --text="Link:") && 
+zenity --info --title="zget" --text="downloading $link" &&
+wget $link && echo $link installed with sucess && echo by NillyTheL0L https://github.com/nillythel0l
