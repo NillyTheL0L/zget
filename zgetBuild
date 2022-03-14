@@ -11,6 +11,7 @@ usage: ${0##*/} [Distro]
 	--redhat -r             Red Hat Based.
 	--arch -a             Arch Based.
 	--suse -s             SUSE Based.
+	--other -o             Other (Dont install dependences).
 
 * Zget NillyTheL0L 2022-2022
 
@@ -34,6 +35,9 @@ sudo echo Lets install dependences && sudo pacman -S libnotify zenity --noconfir
 suse(){
 sudo echo Lets install dependences && sudo zypper install libnotify zenity && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
 }
+other(){
+sudo echo zget need libnotify and zenity install it  && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+}
 
 
 
@@ -51,6 +55,7 @@ while [[ "$1" ]]; do
             --redhat|-r) redhat;;
             --arch|-a) arch;;
             --suse|-s) suse;;
+            --other|-o) other;;
         esac
         shift
     } || {
