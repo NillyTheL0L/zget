@@ -1,6 +1,7 @@
 #!/bin/sh
+pwd=$(pwd) &&
 link=$(zenity --entry --title="zget" --text="Link:") && 
-zenity --info --title="zget" --text="Press OK to download $link" &&
+zenity --info --title="zget" --text="Press OK to download $link on $pwd" &&
 (
 echo "10" ; sleep 1
 echo "# Checking Network..." ; sleep 1
@@ -23,5 +24,5 @@ if [ "$?" = -1 ] ; then
 fi
 wget $link &&
 tput setaf 3
-echo "-->" Zget: $link installed with sucess && echo "-->" Zget: Follow Me on github: https://github.com/nillythel0l/ && notify-send $link Installed! && echo "-->" Zget: Download Completed finishing.... 
+echo "-->" Zget: $link installed with sucess && echo "-->" Zget: Follow Me on github: https://github.com/nillythel0l/ && notify-send $link Installed! && echo "-->" FIle saved to && pwd && echo "-->" Zget: Download Completed finishing.... 
 tput sgr0
