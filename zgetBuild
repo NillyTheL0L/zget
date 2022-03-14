@@ -1,2 +1,60 @@
 #!/bin/sh
-sudo echo you need Zenity and Wget install with your favourite package manager && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
+
+usage() {
+    cat <<EOF
+
+usage: ${0##*/} [Distro]
+
+  Options:
+
+	--debian -d          Ubuntu Based.
+	--redhat -r             Fedora Based.
+	--arch -a             Arch Based.
+	--suse -s             openSUSE Based.
+
+* Zget NillyTheL0L 2022-2022
+
+EOF
+}
+
+[[ -z $1 ]] && {
+    usage
+    exit 1
+}
+
+debian(){
+sudo echo Lets install dependences && sudo apt install libnotify-bin zenity -y &&  cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
+}
+redhat(){
+sudo echo Lets install dependences && sudo dnf install libnotify zenity && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
+}
+arch(){
+sudo echo Lets install dependences && sudo pacman -S libnotify zenity --noconfirm && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
+}
+suse(){
+sudo echo Lets install dependences && sudo zypper install libnotify zenity && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && echo app installed with sucess type zget to open program
+}
+
+
+
+cat <<EOF
+Zget
+                                  NillyTheL0L - 2022-2022                
+EOF
+
+while [[ "$1" ]]; do
+    read -s -n 1 -p "Do you want to continue?[y/N]: "
+    [[ "$REPLY" == "y" ||  "$REPLY" == "Y" ]] && {
+         echo
+         case "$1" in
+            --debian|-d) debian;;
+            --redhat|-r) redhat;;
+            --arch|-a) arch;;
+            --suse|-s) suse;;
+        esac
+        shift
+    } || {
+        printf "\nBye\n" "%s" && exit 0
+    }
+
+done

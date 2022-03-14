@@ -21,5 +21,7 @@ if [ "$?" = -1 ] ; then
         zenity --error \
           --text="Update canceled."
 fi
-wget $link && echo $link installed with sucess && echo by NillyTheL0L https://github.com/nillythel0l
-
+wget $link &&
+tput setaf 3
+echo "-->" Zget: $link installed with sucess && echo "-->" Zget: Follow Me on github: https://github.com/nillythel0l/ && notify-send $link Installed! && echo "-->" Zget: Download Completed finishing.... 
+tput sgr0
