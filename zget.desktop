@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Zget
+Exec=zget
+Icon=zget
+Type=Application
+Categories=Utilities;
+Path=/bin
+X-Desktop-File-Install-Version=0.26
