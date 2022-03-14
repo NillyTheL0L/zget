@@ -1,4 +1,25 @@
 #!/bin/sh
 link=$(zenity --entry --title="zget" --text="Link:") && 
-zenity --info --title="zget" --text="downloading $link" &&
+zenity --info --title="zget" --text="Press OK to download $link" &&
+(
+echo "10" ; sleep 1
+echo "# Checking Network..." ; sleep 1
+echo "20" ; sleep 1
+echo "# Checking Hostname..." ; sleep 1
+echo "50" ; sleep 1
+echo "# Starting Wget..." ; sleep 1
+echo "75" ; sleep 1
+echo "# Downloading Link..." ; sleep 1
+echo "100" ; sleep 1
+) |
+zenity --progress \
+  --title="Downloading $link" \
+  --text="Downloading $link ..." \
+  --percentage=0
+
+if [ "$?" = -1 ] ; then
+        zenity --error \
+          --text="Update canceled."
+fi
 wget $link && echo $link installed with sucess && echo by NillyTheL0L https://github.com/nillythel0l
+
