@@ -1,28 +1,28 @@
 #!/bin/sh
-pwd=$(pwd) &&
+userdir=$(~/)
 link=$(zenity --entry --title="zget" --text="Link:") && 
-zenity --info --title="zget" --text="Press OK to download $link on $pwd" &&
+zenity --info --title="zget - $link" --text="Press OK to download this file on /home/$USER/" &&
 (
 echo "10" ; sleep 1
 echo "# Checking Network..." ; sleep 1
 echo "20" ; sleep 1
 echo "# Checking Hostname..." ; sleep 1
 echo "50" ; sleep 1
-echo "# Starting Wget..." ; sleep 1
+echo "# Checking Wget..." ; sleep 1
 echo "75" ; sleep 1
-echo "# Downloading Link..." ; sleep 1
+echo "# Checking Link..." ; sleep 1
 echo "100" ; sleep 1
 ) |
 zenity --progress \
-  --title="Downloading $link" \
-  --text="Downloading $link ..." \
+  --title="Checking..." \
+  --text="Checking..." \
   --percentage=0
 
 if [ "$?" = -1 ] ; then
         zenity --error \
-          --text="Update canceled."
+          --text="Download canceled."
 fi
-wget $link &&
+wget -P $userdir $link &&
 tput setaf 3
 echo "-->" Zget: $link installed with sucess && echo "-->" Zget: Follow Me on github: https://github.com/nillythel0l/ && notify-send $link Installed! && echo "-->" FIle saved to && pwd && echo "-->" Zget: Download Completed finishing.... 
 tput sgr0
