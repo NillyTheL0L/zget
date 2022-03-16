@@ -24,19 +24,19 @@ EOF
 }
 
 debian(){
-sudo echo Lets install dependences && sudo apt install libnotify-bin zenity -y &&  cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+sudo echo Lets install dependences && sudo apt install libnotify-bin zenity wget -y &&  cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && wget https://github.com/NillyTheL0L/zget/raw/main/zget.png && sudo cp zget.png /usr/share/themes/Adwaita/gtk-2.0/assets/ && sudo mv zget.png /usr/share/themes/Adwaita-dark/gtk-2.0/assets/ && echo app installed with sucess type zget to open program
 }
 redhat(){
-sudo echo Lets install dependences && sudo dnf install libnotify zenity && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+sudo echo Lets install dependences && sudo dnf install libnotify zenity wget && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && wget https://github.com/NillyTheL0L/zget/raw/main/zget.png && sudo cp zget.png /usr/share/themes/Adwaita/gtk-2.0/assets/ && sudo mv zget.png /usr/share/themes/Adwaita-dark/gtk-2.0/assets/ && echo app installed with sucess type zget to open program
 }
 arch(){
-sudo echo Lets install dependences && sudo pacman -S libnotify zenity --noconfirm && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+sudo echo Lets install dependences && sudo pacman -S libnotify zenity wget --noconfirm && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && wget https://github.com/NillyTheL0L/zget/raw/main/zget.png && sudo cp zget.png /usr/share/themes/Adwaita/gtk-2.0/assets/ && sudo mv zget.png /usr/share/themes/Adwaita-dark/gtk-2.0/assets/ && echo app installed with sucess type zget to open program
 }
 suse(){
-sudo echo Lets install dependences && sudo zypper install libnotify zenity && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+sudo echo Lets install dependences && sudo zypper install libnotify zenity wget && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && wget https://github.com/NillyTheL0L/zget/raw/main/zget.png && sudo cp zget.png /usr/share/themes/Adwaita/gtk-2.0/assets/ && sudo mv zget.png /usr/share/themes/Adwaita-dark/gtk-2.0/assets/ && echo app installed with sucess type zget to open program
 }
 other(){
-sudo echo zget need libnotify and zenity install it  && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && echo app installed with sucess type zget to open program
+sudo echo zget need libnotify, wget and zenity install it  && cd ~/ && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget && chmod +x zget && sudo mv zget /usr/bin && wget https://raw.githubusercontent.com/NillyTheL0L/zget/main/zget.desktop && sudo mv zget.desktop /usr/share/applications/ && wget https://github.com/NillyTheL0L/zget/raw/main/zget.png && sudo cp zget.png /usr/share/themes/Adwaita/gtk-2.0/assets/ && sudo mv zget.png /usr/share/themes/Adwaita-dark/gtk-2.0/assets/ && echo app installed with sucess type zget to open program
 }
 
 
