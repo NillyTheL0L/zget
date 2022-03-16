@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Zget
-Exec=zget
+Exec=zget ~/
 Icon=zget
 Type=Application
 Categories=Utilities;
