@@ -1,5 +1,6 @@
 
 # Zget A wget but with a GUI
+![zget](https://user-images.githubusercontent.com/97253814/158682535-03c84072-9e8a-4160-b6a8-b462d869d945.png)
 
 ## Info
 
